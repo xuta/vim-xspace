@@ -12,20 +12,20 @@ When `XSpace is on`, it records all changes with your windows position, tabs, bu
 
 If you start a vim session under a `git` project, `XSpace` will automatically set it `on` with `s:xspace_session_dir` is **root of the git project directory**
 
-```
+```vim
 let s:xspace_session_dir = system("git rev-parse --show-toplevel 2>/dev/null | tr '\\n' '/'")
 ```
 
 # How to work with XSpace
 
-Very easy, the plugin provide you three commands
+Very easy, the plugin provides you three commands
+
 
 ### XSpaceInfo
 
 ```
 :XSpaceInfo
 ```
-
 It will shows state of `XSpace` is on/off and path to session file and undo dir.
 
 
@@ -53,7 +53,7 @@ By default, the plugin sets use `Session.vim` as session name and `.undodir` as 
 
 You can change if you like to do so
 
-```
+```vim
 let g:xspace_session_name = 'A_NEW_NAME.vim'
 let g:xspace_undodir = 'A_NEW_DIR'
 ```
@@ -64,20 +64,20 @@ The plugin requires Vim >= 8.0 or Neovim >= 0.4
 
 ### Vim Plug
 
-```
+```vim
 Plug 'xuta/vim-xspace'
 ```
 
 ### Using Vundle
 
-```
+```vim
 Plugin 'xuta/vim-xspace'
 ```
 
 ### Using Pathogen
 
-```
-cd ~/.vim/bundle
+```bash
+cd /.vim/bundle
 git clone https://github.com/xuta/vim-xspace
 ```
 
